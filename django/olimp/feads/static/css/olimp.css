@@ -1,0 +1,44 @@
+body {
+    padding-left: 15px;
+    color: hwb(0 0% 100% / 0.963);
+    font-family: 'Lobster';
+    font-size: 20pt;
+}
+
+h1 {
+    color: #FCA205;
+    font-family: 'Lobster';
+    display: flex;
+    justify-content: center;
+}
+h2 {
+    color: #FCA205;
+    display: flex;
+    justify-content: center;
+    font-size: 24pt;
+}
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+.olimpiada {
+    color: #000000;
+    display: flex;
+    font-size: 12pt;
+    margin: 3px;
+
+}
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.content {
+    margin-left: 40px;
+}

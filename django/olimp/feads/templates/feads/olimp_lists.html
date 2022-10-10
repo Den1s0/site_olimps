@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<title>Олимпиады</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{% static 'css/olimp.css' %}">
+	</head>
+	<body>
+		<div class="page-header">
+			<h1><a href="/">Олимпиады</a></h1>
+		</div>
+		<div class="olimpiada">
+			{%for olimp in olimps%}
+				<hr>
+				Name: {{olimp.Title}}<br>
+				Description: {{olimp.text}}<br>
+				Start_date: {{start_date}}<br>
+				End_date: {{end_date }}<br>
+				Awards: {{awards}}<br>
+				Site: {{site}}<br>
+				Tags: {{tags}}<br>
+				<hr>
+			{% endfor %}
+		</div>
+		Имя: {{name}}<br>
+		Роль: {{role}}<br>
+		<h2>Список олимпиад:</h2>
+	</body>
+</html>
