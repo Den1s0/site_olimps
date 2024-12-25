@@ -1,13 +1,29 @@
 from django.db import models
 
-class Post(models.Model):
-    title = models.CharField(max_length=100)
-    text = models.TextField()
-    start_date = models.DateTimeField(blank=True, null=True)
-    end_date = models.DateTimeField(blank=True, null=True)
-    awards = models.TextField()
-    site = models.URLField(null=True)
-    tags = models.CharField(max_length=100, blank=True)
-
+class Olimp(models.Model):
+    Title = models.CharField(max_length=100)
+    Description = models.TextField()
+    Date_Start = models.DateTimeField(blank=True,null=True)
+    Date_End = models.DateTimeField(blank=True,null=True)
+    Site = models.URLField(blank=True)
+    tags = models.CharField(max_length=200, blank=True)
+    
     def __str__(self):
-        return self.title
+        return self.Title
+    
+    
+    
+class Trier(models.Model):
+    Name = models.CharField(max_length=100)
+    LastName = models.CharField(max_length=100)
+    SecondName = models.CharField(max_length=100)
+    Fomka = models.IntegerField(blank=True,null=True)
+    Olympics1 = models.ForeignKey(Olimp, on_delete = models.CASCADE, related_name='First_olimp')
+    Olympics2 = models.ForeignKey(Olimp, on_delete = models.CASCADE, related_name='Olympics2')#, on_delete = models.CASCADE, related_name='Second_olimp')
+    Olympics3 = models.ForeignKey(Olimp, on_delete = models.CASCADE, related_name='Olympics3')
+    
+    
+    def __str__(self):
+        return self.Name+' '+self.LastName
+    
+    
